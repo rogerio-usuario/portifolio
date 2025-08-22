@@ -418,38 +418,23 @@ section {
 
 /* Responsivo para telas pequenas */
 @media (max-width: 600px) {
-  .menu ul {
+  .menu {
+    height: auto;
     flex-direction: column;
-    align-items: center;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
   }
-
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
-}
-
-
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: #333;
-}
 
   .menu-list {
-    display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #222;
-    width: 100%;
-    padding: 10px 0;
-    position: relative;
-    top: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 60px;
     left: 0;
+    width: 100%;
+    display: none;
     z-index: 999;
   }
 
@@ -457,11 +442,27 @@ section {
     display: flex;
   }
 
-.menu a.active {
-  background-color: #0056b3;
-  font-weight: bold;
-  border-radius: 4px;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .menu-list li {
+    margin: 10px 0;
+  }
+
+  .menu-list a {
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
 }
+
 
 .filtros {
   text-align: center;
