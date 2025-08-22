@@ -1131,3 +1131,13 @@ p {
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    background-color: #fff; /* ou qualquer cor sólida */
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+}
