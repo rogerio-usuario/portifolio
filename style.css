@@ -1,0 +1,1133 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('imagens/fundo-site.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(238, 243, 250, 0.3);
+  z-index: -1; 
+  filter: brightness(1.4); /* clareia a imagem */
+}
+
+.menu {
+  height: 60px;         /* Define altura total */
+  line-height: 30px;    /* Alinha os itens verticalmente */
+  position: fixed;          /* Fixa o menu */
+  top: 0;
+  left:0;
+  width: 100%;
+  background-image:url('imagens/menu-textura.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1000;            /* Garante que fique acima de tudo */
+  border: 2px solid rgb(52, 5, 241);
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 50, 0.3); /* tom azul escuro translúcido */
+  z-index: -1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  background-color: #2d3fa900;
+  padding: 5px 10px; /* ⬅ diminui a altura do menu */
+  flex-wrap: wrap;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.menu a {
+  color: #f7f6f6;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #446ffb;
+  border-radius: 8px; /* arredonda os cantos */
+  box-shadow: 0 4px 12px rgba(2, 4, 35, 0.2);
+}
+
+.menu-ativo {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+
+form {
+  width: 80%;
+  max-width: 500px;
+  margin: 30px auto;
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+
+
+
+/* CONTATO*/
+.pasta-contato {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 40px 20px 20px;
+  margin: 60px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.aba-pasta {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.conteudo-pasta {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Estilo do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+
+#form-contato input:focus,
+#form-contato textarea:focus {
+  border: 2px solid #007BFF; /* azul moderno e vibrante */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* efeito de brilho suave */
+}
+#form-contato button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+#form-contato label {
+  display: block;
+  margin-top: 20px;
+  color: #4a4af4; /* preto forte */
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* 🌀 Efeito interativo #1 */
+button:hover {
+  transform: scale(1.05);
+}
+
+/*  Efeito interativo #2 */
+input:focus, textarea:focus {
+  border: 2px solid #007BFF;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; /* ou use stretch para igualar altura */
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 150px; /* ou ajuste conforme o visual desejado */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.card-front img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* cantos arredondados */
+}
+
+.card-back {
+  background-color: #f2f2f2;
+  color: black;
+  transform: rotateY(180deg);
+  
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  text-align: center;
+  padding: 20px;             /* espaço interno */
+  border-radius: 8px;
+}
+
+
+section {
+  padding: 10px 20px;
+  min-height: auto;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.2); /* fundo translúcido */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}tc */
+
+#inicio {
+  scroll-margin-top: 70px; /* altura do menu fixo */
+  padding-top: 20px;       /* opcional: afasta do topo visualmente */
+}
+
+.secao-inicio {
+  scroll-margin-top: 70px;  /* distância para compensar o menu fixo */
+  padding: 20px;
+}
+
+
+
+.centralizar-meio {
+  min-height: 10vh;             /* ou experimente 50vh, 40vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* centraliza verticalmente */
+  align-items: center;           /* centraliza horizontalmente */
+  text-align: center;
+}
+
+
+
+.centralizar-meio h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #002f6c;
+}
+
+.centralizar-meio p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  margin: 6px 0;
+}
+
+
+
+#slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px; /* aumenta a largura máxima */
+  margin: 40px auto; /* centraliza e dá espaço acima/abaixo */
+  height: 300px;     /* altura desejada do carrossel */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  height: 100%;
+}
+
+.slides img {
+  width: auto;              /* deixa a largura se ajustar automaticamente */
+  height: 100%;             /* ocupa toda a altura do carrossel */
+  object-fit: contain;      /* mantém a proporção sem cortar */
+  margin: 0 10px;           /* espaço entre as imagens */
+  border-radius: 8px;
+}
+
+
+
+/* Animação contínua */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+#projetos {
+  scroll-margin-top: 40px; /* igual à altura do menu fixo */
+}
+
+#sobre {
+  scroll-margin-top: 40px; /* igual à altura do menu fixo */
+}
+
+#contato {
+  padding: 40px 20px;
+  scroll-margin-top: 60px; /* igual à altura do menu fixo */
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: #222;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .menu-list.active {
+    display: flex;
+  }
+}
+
+.menu a.active {
+  background-color: #0056b3;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.filtros {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  align-items: center;
+  gap: 8px;
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.filtros button:hover {
+  background-color: #0056b3;
+}
+
+.filtros button.ativo {
+  background-color: #0056b3; /* ou qualquer cor que contraste */
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+#projetos p {
+  line-height: 1.4; /* ou experimente 1.5, 1.4… */
+}
+.bloco-impacto h3 {
+  margin-bottom: 4px;
+}
+
+
+
+
+
+
+
+
+
+.bloco-impacto ul {
+  margin-top: 0;
+  padding-left: 20px; /* se quiser indentação elegante */
+  line-height: 1.4;
+}
+
+.lista-sem-marcador {
+  list-style: none;
+  padding-left: 0;       /* remove o recuo padrão */
+  margin-top: 0;
+}
+
+.lista-sem-marcador li {
+  margin-bottom: 6px;    /* espaço entre linhas */
+  line-height: 1.0;
+}
+.centralizado {
+  text-align: center;
+}
+.centralizar-meio {
+  height: 100vh;                 /* ocupa toda a altura da janela */
+  display: flex;
+  justify-content: center;      /* centraliza horizontalmente */
+  align-items: center;          /* centraliza verticalmente */
+  text-align: center;           /* alinha o texto ao centro */
+  flex-direction: column;       /* mantém tudo empilhado em coluna */
+}
+.centralizar-meio p {
+  font-size: 1.4em;
+  line-height: 1.5;
+  margin: 0;
+}
+.italico {
+  font-style: italic;
+}
+p {
+  line-height: 1.0;  /* mais compacto que o padrão 1.6 */
+}
+.certificacoes p,
+.certificacoes a {
+  line-height: 1.0;
+}
+.links-cursos a {
+  line-height: 1.0;
+  margin: 0px 0; /* diminui espaçamento entre os links */
+}
+.links-cursos img {
+  width: 40px;    /* ou experimente 32px, 24px… */
+  height: 40px;
+  object-fit: contain; /* mantém proporções sem distorcer */
+}
+.link-icone {
+  display: inline-flex;
+  align-items: center;   /* centraliza verticalmente */
+  gap: 8px;              /* espaço entre ícone e texto */
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+.link-icone img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-conteudo {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-conteudo h3 {
+  margin-top: 20px;
+  color: #002f6c;
+}
+
+.modal-conteudo p, .modal-conteudo ul {
+  line-height: 1.5;
+  color: #333;
+}
+
+.modal-conteudo .fechar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.galeria-modal {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.galeria-modal img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* PROJETOS*/
+.pasta-projetos {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 30px 20px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px black;
+}
+
+.aba-pasta {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: #63abf9;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.conteudo-pasta {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(0, 123, 255, 0.093); /*transparencia da tela dos botoes projetos*/
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  line-height: 1.6;
+  color: #333;
+}
+
+
+
+.conteudo-pasta {
+  max-height: 500px;         /* altura visível da "pasta" */
+  overflow-y: auto;          /* ativa rolagem vertical */
+  padding-right: 10px;       /* espaço para a barra de rolagem */
+}
+
+
+
+
+/* Estiliza a barra de rolagem no Chrome, Edge e Safari */
+.conteudo-pasta::-webkit-scrollbar {
+  width: 8px;
+}
+
+.conteudo-pasta::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+
+.conteudo-pasta::-webkit-scrollbar-thumb {
+  background-color: #0056b3;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+}
+
+/* Firefox */
+.conteudo-pasta {
+  scrollbar-width: thin;
+  scrollbar-color: #0056b3 #e0e0e0;
+}
+.btn-fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #63abf9; /* azul claro */
+  color: white;
+  border: none;
+  font-size: 18px;            /* menor que antes */
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.btn-fechar:hover {
+  background-color: #90c4ff; /* azul mais suave no hover */
+  transform: scale(1.1);
+}
+
+/* Quando a classe 'embaçado' for ativada */
+.embaçado {
+  filter: blur(6px);.btn-fechar:hover {
+  background-color: #060e43;
+  transform: scale(1.1);
+}
+  transition: filter 0.3s ease;
+}
+
+
+/* CERTIFICADOS */
+.pasta-certificados {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 40px 20px 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px black;
+}
+
+/* Aba superior */
+.pasta-certificados .aba-pasta {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Conteúdo com rolagem */
+.pasta-certificados .conteudo-pasta {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px 10px;
+  border-radius: 12px;
+  background-color: rgba(0, 123, 255, 0.093); /*transparencia da tela dos botoes certificados*/
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Barra de rolagem personalizada */
+.pasta-certificados .conteudo-pasta::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pasta-certificados .conteudo-pasta::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+
+.pasta-certificados .conteudo-pasta::-webkit-scrollbar-thumb {
+  background-color: #0056b3;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+}
+
+/* Firefox */
+.pasta-certificados .conteudo-pasta {
+  scrollbar-width: thin;
+  scrollbar-color: #0056b3 #e0e0e0;
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #63abf9;
+  color: white;
+  border: none;
+  font-size: 14px;            /* menor texto */
+  font-weight: bold;
+  padding: 4px 8px;           /* botão mais compacto */
+  border-radius: 6px;         /* cantos arredondados, mas não circular */
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.btn-fechar:hover {
+  background-color: #90c4ff;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+.card img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+/* BOTOES CONTATO */
+.botao-contato.email {
+  display: inline-flex;
+  flex-direction: column;         /* empilha imagem e texto verticalmente */
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.botao-contato.email:hover {
+  transform: scale(1.1);
+}
+
+/* imagem maior */
+.botao-contato.email img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* texto abaixo da imagem */
+.botao-contato.email .texto-email {
+  text-decoration: none;
+  display: block;
+  color: #0056b3;
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+
+/* Remove sublinhado do texto */
+.botao-contato.email {
+  text-decoration: none;
+  color: white;
+}
+
+.botao-contato.email .texto-email {
+  text-decoration: none;
+  display: block;
+  color: #0056b3;
+  margin: 0;
+}
+
+.botao-contato.email:link,
+.botao-contato.email:visited,
+.botao-contato.email:hover,
+.botao-contato.email:active {
+  text-decoration: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-conteudo {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-conteudo h3 {
+  margin-bottom: 20px;
+  color: #0056b3;
+  text-align: center;
+}
+
+.modal-conteudo input,
+.modal-conteudo textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.modal-conteudo .btn-enviar {
+  background-color: #63abf9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.modal-conteudo .btn-enviar:hover {
+  transform: scale(1.05);
+  background-color: #90c4ff;
+}
+
+.modal-conteudo .btn-fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #63abf9;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.modal-conteudo .btn-fechar:hover {
+  background-color: #90c4ff;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+/* Botões com imagem apenas (LinkedIn e WhatsApp) */
+.botao-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.botao-icone img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.botao-icone:hover {
+  transform: scale(1.1);
+}
+
+
+.botao-contato {
+  text-decoration: none;
+  color: white;
+}
+
+.botao-contato p {
+  margin: 0;
+  text-decoration: none;
+}
+
+
+
+.pasta-contato {
+  position: relative;
+  background-color: transparent;/* tela transparente */
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 40px 20px 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px black; /* sombra escura*/
+}
+
+.aba-pasta {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.conteudo-pasta {
+  padding: 20px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6); /*Sombra dos botoes que abre cada projeto*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.card p {
+  font-weight: bold;
+  color: #0056b3;
+  margin: 0;
+}
+
+/* TELA SOBRE*/
+.pasta-sobre {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 40px 20px 20px;
+  margin: 60px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px black;
+}
+
+.pasta-sobre .aba-pasta {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.pasta-sobre .conteudo-pasta {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  line-height: 1.6;
+  color: #333;
+}
+
+/*foto perfil*/
+.foto-sobre {
+  display: block;
+  margin: 0 auto 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top; /* Centraliza horizontalmente, sobe verticalmente */
+  border-radius: 16px;
+  border: 6px double #7cafe7;
+  box-shadow: 0 6px 12px black;
+  background-color: #fff;
+}
+
+
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha à esquerda */
+  text-align: left;        /* Garante que o texto fique alinhado à esquerda */
+}
+
+.texto-sobre {
+  width: 100%;
+}
+
+.texto-sobre h2 {
+  color: #0056b3;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: left;
+}
+
+.texto-sobre p {
+  font-size: 16px;
+  color: #333;
+  max-width: 700px;
+  line-height: 1.6;
+  text-align: left;
+}
+
