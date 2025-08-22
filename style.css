@@ -429,8 +429,23 @@ section {
     position: absolute;
     right: 20px;
     top: 10px;
-  }
 
+}
+  .menu-toggle {
+  display: none; /* só aparece no mobile */
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #333;
+}
+
+
+  
   .menu-list {
     display: none;
     flex-direction: column;
@@ -1141,4 +1156,5 @@ p {
     margin: 10px 0;
   }
 }
+
 
