@@ -20,9 +20,10 @@ window.addEventListener("DOMContentLoaded", () => {
     let index = 0;
 
     setInterval(() => {
-      index = (index + 1) % total;
-      slides.style.transform = `translateX(-${index * (100 / total)}%)`;
-    }, 3000);
+  index = (index + 1) % total;
+  slides.style.transform = `translateX(-${index * (100 / total)}%)`;
+}, 1000); // agora troca a cada 1.5 segundos
+
   }
 });
 
@@ -227,11 +228,11 @@ const certificados = {
     (IFRS) em 12 Outubro de 2023, uma formação online de 200 horas que me trouxe uma base sólida 
     e prática sobre o funcionamento da logística moderna. Foi uma experiência muito positiva — 
     cada módulo me ajudou a entender melhor como os bastidores das operações funcionam,
-     desde o estoque até a entrega final.<br><br>
+    desde o estoque até a entrega final.<br><br>
 
     <strong style="color:rgb(5, 5, 5); font-size: 24px;">
-  O curso é dividido em 9 módulos:
-</strong><br>
+      O curso é dividido em 9 módulos:
+    </strong><br>
 
     • <em><strong>Logística geral</strong>:</em> Entendi como a logística é estratégica para qualquer empresa.<br>
     • <em><strong>Gestão de estoques</strong>:</em> Aprendi técnicas para controlar e organizar estoques.<br>
