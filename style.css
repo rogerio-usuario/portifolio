@@ -377,10 +377,9 @@ section {
 
 .slides {
   display: flex;
-  animation: scroll 60s linear infinite;
+  animation: scroll 60s linear infinite; /*tempo de rolagem*/
   height: 100%;
-  transition: transform 20s ease-in-out;
-  width: calc(20% * 23)
+  width: max-content; /*todos os certificados no carrosel*/
 
 }
 
@@ -398,7 +397,7 @@ section {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
