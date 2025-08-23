@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* Fundo do site */
 body {
   position: relative; /* necessário para o ::before funcionar corretamente */
   background-image: url('imagens/fundo-site.jpg');
@@ -10,59 +10,65 @@ body {
   background-repeat: no-repeat;
   padding-top: 60px;
   margin: 0;
-  min-height: 100vh; /* garante que o body ocupe toda a altura da tela */
+  min-height: 100vh;
   overflow-x: hidden;
+  z-index: 0; /* garante que o fundo fique atrás de tudo */
 }
 
+/* Camada de brilho sobre o fundo */
 body::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(238, 243, 250, 0.3);
-  z-index: 0;
+  background-color: rgba(238, 243, 250, 0.3); /* camada translúcida */
+  z-index: -1; /* abaixo do conteúdo */
   pointer-events: none;
   filter: brightness(1.4);
 }
 
-
-
+/* Menu fixo no topo */
 .menu {
-  height: 60px;         /* Define altura total */
-  line-height: 30px;    /* Alinha os itens verticalmente */
-  position: fixed;          /* Fixa o menu */
+  height: 60px;
+  line-height: 30px;
+  position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
-  background-image:url('imagens/menu-textura.jpg');
+  background-image: url('imagens/menu-textura.jpg');
   background-size: cover;
   background-position: center;
-  z-index: 1000;            /* Garante que fique acima de tudo */
+  z-index: 1000;
   border: 2px solid rgb(52, 5, 241);
 }
 
+/* Camada escura sobre a textura do menu */
 .menu::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 50, 0.3); /* tom azul escuro translúcido */
+  background-color: rgba(0, 0, 50, 0.3);
   z-index: -1;
 }
 
+/* Lista de itens do menu */
 .menu ul {
   display: flex;
   justify-content: center;
-  background-color: #2d3fa900;
-  padding: 5px 10px; /* ⬅ diminui a altura do menu */
+  background-color: transparent;
+  padding: 5px 10px;
   flex-wrap: wrap;
+  margin: 0;
 }
 
+/* Itens individuais */
 .menu li {
   list-style: none;
   margin: 0 10px;
 }
 
+/* Links do menu */
 .menu a {
   color: #f7f6f6;
   font-weight: bold;
@@ -71,17 +77,19 @@ body::before {
   transition: background 0.3s ease;
 }
 
+/* Hover nos links */
 .menu a:hover {
   background-color: #446ffb;
-  border-radius: 8px; /* arredonda os cantos */
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(2, 4, 35, 0.2);
 }
 
+/* Estilo ativo do menu */
 .menu-ativo {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Formulário centralizado */
 form {
   width: 80%;
   max-width: 500px;
@@ -89,8 +97,9 @@ form {
   background: transparent;
   padding: 20px;
   border-radius: 8px;
+  z-index: 1; /* garante que fique acima do fundo */
+  position: relative;
 }
-
 
 /* CONTATO*/
 .pasta-contato {
