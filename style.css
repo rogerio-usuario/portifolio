@@ -471,6 +471,21 @@ section {
     gap: 12px; /* espaçamento entre os botões */
   }
 
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
+  
   .menu-list.active {
     display: flex;
   }
@@ -1211,6 +1226,7 @@ p {
     margin: 10px 0;
   }
 }
+
 
 
 
