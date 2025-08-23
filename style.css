@@ -485,12 +485,20 @@ section {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
+    padding: 5px;
   }
 
   .menu li {
     flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .menu a {
+    font-size: 14px; /* opcional: reduz o tamanho pra caber melhor */
+    padding: 8px 12px;
   }
 }
+
 
 
 
