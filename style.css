@@ -101,6 +101,23 @@ form {
   position: relative;
 }
 
+@media (max-width: 480px) {
+  .menu ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .menu li {
+    flex: 0 0 auto;
+  }
+}
+
+
+
+
+
+
 /* CONTATO*/
 .pasta-contato {
   position: relative;
