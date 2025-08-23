@@ -16,13 +16,14 @@ body {
 }
 
 
-body {
+
   background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 #certificados, #sobre, #projetos {
-  background-color: #e0f7fa !important;
-  color: #000000;
+  background-color: #e0f7fa !important; /* Azul claro */
+  color: #000000 !important; /* Texto preto */
 }
 
 
@@ -1209,4 +1210,5 @@ p {
     margin: 10px 0;
   }
 }
+
 
