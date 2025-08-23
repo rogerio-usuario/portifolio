@@ -5,12 +5,19 @@
    <meta name="description" content="Portfólio de Rogério Ignácio">
    <meta name="keywords" content="portfólio, desenvolvedor, front-end, projetos">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="light only">
    <title>Home | Portfólio Rogério</title>
    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    
     <script src="script.js"></script>
-
+<script>
+  if (window.top !== window.self) {
+    window.top.location = window.location.href;
+  }
+</script>
+    
     <div id="conteudo-site">
       <nav class="menu">
         <ul>
@@ -411,3 +418,4 @@
     </script>
   </body>
 </html>
+
