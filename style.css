@@ -377,10 +377,12 @@ section {
 
 .slides {
   display: flex;
-  animation: scroll 60s linear infinite; /*tempo de rolagem*/
+  animation: scroll 80s linear infinite; /*tempo de rolagem*/
   height: 100%;
   width: max-content; /*todos os certificados no carrosel*/
-
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .slides img {
@@ -394,12 +396,13 @@ section {
 /* Animação contínua */
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
+
 
 
 
