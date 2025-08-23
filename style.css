@@ -482,19 +482,20 @@ section {
 }
 @media (max-width: 480px) {
   .menu ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
+    display: flex;
+    flex-wrap: nowrap;           /* impede quebra de linha */
+    overflow-x: auto;            /* permite rolagem horizontal */
+    justify-content: flex-start; /* alinha à esquerda */
     padding: 5px;
   }
 
   .menu li {
-    flex: 0 0 auto;
-    white-space: nowrap;
+    flex: 0 0 auto;              /* mantém largura automática */
+    white-space: nowrap;         /* evita quebra de texto */
   }
 
   .menu a {
-    font-size: 14px; /* opcional: reduz o tamanho pra caber melhor */
+    font-size: 14px;             /* opcional: reduz tamanho pra caber melhor */
     padding: 8px 12px;
   }
 }
