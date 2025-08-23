@@ -3,23 +3,30 @@ html {
 }
 
 body {
+  position: relative; /* necessário para o ::before funcionar corretamente */
   background-image: url('imagens/fundo-site.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 60px;
+  margin: 0;
+  min-height: 100vh; /* garante que o body ocupe toda a altura da tela */
+  overflow-x: hidden;
 }
-
 
 body::before {
   content: "";
-  position: relative;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(238, 243, 250, 0.3);
-  z-index: -1; 
-  filter: brightness(1.4); /* clareia a imagem */
+  position: absolute; /* corrigido para cobrir o body */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 243, 250, 0.3); /* camada de brilho */
+  z-index: 0; /* abaixo do conteúdo, mas acima do fundo */
+  pointer-events: none; /* evita interferência com cliques */
+  filter: brightness(1.4);
 }
+
 
 .menu {
   height: 60px;         /* Define altura total */
