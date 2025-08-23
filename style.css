@@ -15,6 +15,18 @@ body {
   z-index: 0; /* garante que o fundo fique atrás de tudo */
 }
 
+
+body {
+  background-color: #ffffff !important;
+}
+
+#certificados, #sobre, #projetos {
+  background-color: #e0f7fa !important;
+  color: #000000;
+}
+
+
+    
 /* Camada de brilho sobre o fundo */
 body::before {
   content: "";
@@ -1197,3 +1209,4 @@ p {
     margin: 10px 0;
   }
 }
+
