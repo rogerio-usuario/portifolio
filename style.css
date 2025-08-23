@@ -13,17 +13,18 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   z-index: 0; /* garante que o fundo fique atrás de tudo */
+  background-color: #ffffff;
+  color: #000000;
 }
 
-
-
-  background-color: #ffffff !important;
-  color: #000000 !important;
+.secao-clara {
+  background-color: #e0f7fa;
+  color: #000000;
 }
 
-#certificados, #sobre, #projetos {
-  background-color: #e0f7fa !important; /* Azul claro */
-  color: #000000 !important; /* Texto preto */
+.secao-escura {
+  background-color: #263238;
+  color: #ffffff;
 }
 
 
@@ -1210,5 +1211,6 @@ p {
     margin: 10px 0;
   }
 }
+
 
 
