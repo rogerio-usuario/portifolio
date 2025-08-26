@@ -220,6 +220,87 @@ const projetos = {
 // TELA CERTIFICADO
 
 const certificados = {
+ cert14: {
+  titulo: "Marca Pessoal 360°, de profissional a anônimo a referência visivel",
+  imagem: "imagens/Certificado14.jpg",
+  descricao: 
+  `
+   Concluí o curso de Marca Pessoal 360º de profissional anônimo a 
+   referência visível pelo Santander Open Academy com carga horaria 
+   8 horas , conclui em 26 de Agosto 2025, Este curso foi uma verdadeira 
+   imersão no universo da marca pessoal, com foco em transformar 
+   profissionais invisíveis em referências reconhecidas no mercado. 
+   Ao longo de 9 módulos intensivos, aprendi a construir, comunicar, 
+   expandir e monetizar minha marca de forma estratégica e 
+   autêntica.<br><br>
+
+    <strong style="color:rgb(5, 5, 5); font-size: 24px;">
+      O curso é dividido em 9 módulos:</strong><br>
+
+    • <em><strong>O novo paradigma da marca pessoal I</strong>:</em>
+    Neste primeiro contato, entendi que marca pessoal não é sobre 
+    autopromoção, mas sobre reputação e valor percebido. Foi apresentado 
+    o conceito de autenticidade como base da construção de autoridade, 
+    e como o mercado atual valoriza profissionais que se posicionam com 
+    clareza e propósito.<br>
+    • <em><strong>O novo paradigma da marca pessoal II</strong>:</em>
+    Aprofundamos a ideia de que visibilidade não é vaidade, é estratégia. 
+    Aprendi a identificar os pilares que sustentam uma marca pessoal 
+    forte: identidade, consistência e relevância. Também discutimos 
+    como o digital mudou a forma como nos apresentamos profissionalmente.<br>
+    • <em><strong>Encontre o seu diferencial exclusivo (seu ponto de ouro)
+    </strong>:</em>Este módulo foi um dos mais transformadores. Fiz 
+    exercícios práticos para identificar meu “ponto de ouro” — aquilo 
+    que me torna único e valioso no mercado. Aprendi a traduzir minha 
+    experiência, valores e habilidades em uma proposta clara e memorável.<br>
+    • <em><strong>Estratégia de comunicação e visibilidade I</strong>:
+    </em>Aqui, mergulhei nas ferramentas de comunicação que ajudam a 
+    tornar a marca pessoal visível. Aprendi sobre storytelling, tom de 
+    voz, canais digitais e como adaptar minha mensagem para diferentes 
+    públicos. A clareza na comunicação foi destacada como diferencial 
+    competitivo.<br>
+    • <em><strong>Estratégia de comunicação e visibilidade II</strong>:
+    </em>Neste segundo momento, o foco foi em planejamento e consistência.
+     Aprendi a criar um calendário editorial, definir formatos de 
+     conteúdo e usar métricas para avaliar o impacto da minha 
+     comunicação. A ideia é transformar presença digital em influência 
+     real.<br>
+    • <em><strong>Rede estratégica e relacionamentos de alto valor
+    </strong>:</em>Este módulo mostrou que marca pessoal também se 
+    constrói por meio de conexões. Aprendi a mapear e cultivar 
+    relacionamentos estratégicos, participar de comunidades relevantes 
+    e gerar valor nas interações. Networking deixou de ser algo 
+    superficial e passou a ser uma ferramenta de posicionamento.<br>
+    • <em><strong>Monetização da sua marca pessoal</strong>:</em>
+    Aqui, entendi como transformar autoridade em oportunidades reais. 
+    Foram apresentadas formas de monetizar a marca pessoal por meio de 
+    produtos, serviços, parcerias e mentorias. Aprendi a precificar meu 
+    valor e a criar propostas comerciais alinhadas com minha identidade.<br>
+    • <em><strong>Amplie e automatize a sua marca pessoal I</strong>:</em>
+    Este módulo trouxe ferramentas para escalar minha presença digital. 
+    Aprendi sobre automação de conteúdo, gestão de plataformas e uso de 
+    inteligência artificial para manter consistência sem perder 
+    autenticidade.<br>
+    • <em><strong>Dimensione e automatize a sua marca pessoal II</strong>:</em>
+    Finalizamos com estratégias para manter a marca pessoal viva e 
+    relevante ao longo do tempo. Aprendi a revisar posicionamento, 
+    adaptar a comunicação conforme o crescimento e usar dados para 
+    tomar decisões mais inteligentes.<br><br>
+
+    O curso foi extremamente prático, com vídeos curtos, atividades 
+    reflexivas e exemplos reais. A linguagem acessível e os exercícios 
+    aplicáveis tornaram o aprendizado fluido e envolvente. Ao concluir 
+    em 26 de agosto de 2025, saí com uma visão clara de como construir 
+    uma marca pessoal sólida, comunicar com impacto, gerar valor e 
+    transformar minha trajetória profissional em referência visível.<br><br>
+
+    Esse curso me deu não só conhecimento, mas também ferramentas para 
+    aplicar imediatamente e evoluir como profissional com propósito e 
+    presença estratégica.<br>
+  
+  `
+},
+
  cert13: {
   titulo: "Assistente de Logística",
   imagem: "imagens/Certificado13.jpg",
